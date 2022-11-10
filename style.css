@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 10px;
+    display: flex;
+    background-color: #F7F7F7;
+}
+
+.container {
+    margin: 3rem auto 0 auto;
+    width: 40rem;
+}
+
+.container__header {
+    border-bottom: 2px solid black;
+}
+
+.container__logo {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.container__body {
+    display: flex;
+    margin: 2rem 0;
+}
+
+/* INPUT AND INPUT ANIMATION */
+.container__input {
+    width: 100%;
+    margin-right: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container__input__animation input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    outline: none;
+    font-size: 20px;
+    padding-bottom: 4px;
+}
+
+.container__input label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    color: #6A6A6A;
+    border-bottom: 1px solid #6A6A6A;
+    font-size: 20px;
+    padding-bottom: 4px;
+}
+
+.container__input label::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid black;
+    left: 0px;
+    bottom: -1px;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.content-text {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.container__input input:focus + .label-text .content-text, .container__input input:valid + .label-text .content-text{
+    transform: translateY(-180%);
+    font-size: 12px;
+    color: black;
+}
+
+.container__input input:focus + .label-text::after, .container__input input:valid + .label-text::after {
+    transform: translateX(0%);
+}
+/* INPUT ANIMATION ENDS*/
+
+/* BUTTONS STYLES */
+.container__input__button {
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.buttons {
+    width: 4rem;
+    height: 2rem;
+    background-color: transparent;
+    border: 1px solid #6A6A6A;
+    color: #6A6A6A;
+    cursor: pointer;
+}
+
+.buttons-active {
+    width: 4rem;
+    height: 2rem;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+}
+
+.buttons-active:hover {
+    background-color: black;
+    color: #F7F7F7;
+}
+
+/* TASK LIST */
+.container__task {
+    display: flex;
+    margin: 3.5rem 0;
+    height: 100%;
+}
+
+.container__task__buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+}
+
+.input__task {
+    background-color: #1F1F1F;
+    color: #F7F7F7;
+    border: none;
+    outline: none;
+    margin-right: 20px;
+    font-size: 1rem;
+    margin: 0 25px 0 0;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.input__task-done {
+    background-color: #1F1F1F;
+    color: #D3D3D3;
+    border: none;
+    outline: none;
+    margin-right: 20px;
+    font-size: 1rem;
+    margin: 0 25px 0 0;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: line-through;
+}
+
+.container__message {
+    display: flex;
+    margin-top: 3.5rem;
+}
+
+.container__message p {
+    font-size: 1.5vh;
+    margin: auto;
+    color: #6A6A6A;
+}

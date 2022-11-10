@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="container__header">
+
+            <div class="container__logo">
+                <h1>To Do list</h1>
+            </div>
+
+        </div>
+
+        <div class="container__body">
+
+            <div class="container__input">
+                <div class="container__input__animation">
+                    <input type="text" name="text" required autocomplete="off" id="input__field">
+                    <label for="text" class="label-text">
+                        <span class="content-text">Write your task...</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="container__input__button">
+                <button class="buttons" id="addButton">ADD</button>
+            </div>
+
+        </div>
+
+        <div class="container__footer">
+
+            <div class="container__tasks__list">
+                <div class="container__message">
+                    <p>There are no tasks.</p>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
